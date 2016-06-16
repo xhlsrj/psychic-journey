@@ -1,0 +1,16 @@
+#anchor{
+    color: deepskyblue;
+    text-decoration: none;
+}
+#btn{
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#span_btn{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
