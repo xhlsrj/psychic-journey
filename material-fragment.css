@@ -42,3 +42,23 @@
     border-width: 0;
     border-radius: 50%;
 }
+#point_box{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: lightgray;
+}
+#point_box:hover #point{
+    transform: scale(1,1);
+    transition: 200ms;
+}
+#point{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: lightpink;
+    border-width: 0;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    transform: scale(0,0);
+}
