@@ -1,37 +1,43 @@
-#anchor{
+#anchor {
     color: deepskyblue;
     text-decoration: none;
 }
-#anchor:hover{
+
+#anchor:hover {
     ;
 }
-#btn{
+
+#btn {
     background-color: #FFFFFF;
     border: none;
     outline: none;
     cursor: pointer;
 }
-#span_btn{
+
+#span_btn {
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
 }
-#circle_wrap{
+
+#circle_wrap {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 50px;
     background-color: lightpink;
 }
-#circle_wrap:hover #circle{
+
+#circle_wrap:hover #circle {
     left: 0;
     top: 0;
     width: 50px;
     height: 50px;
     transition: 200ms;
 }
-#circle{
+
+#circle {
     position: relative;
     left: 50%;
     top: 50%;
@@ -42,17 +48,20 @@
     border-width: 0;
     border-radius: 50%;
 }
-#point_box{
+
+#point_box {
     display: inline-block;
     width: 50px;
     height: 50px;
     background-color: lightgray;
 }
-#point_box:hover #point{
-    transform: scale(1,1);
+
+#point_box:hover #point {
+    transform: scale(1, 1);
     transition: 200ms;
 }
-#point{
+
+#point {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -60,5 +69,35 @@
     border-width: 0;
     border-radius: 50%;
     transform-origin: 50% 50%;
-    transform: scale(0,0);
+    transform: scale(0, 0);
+}
+
+.btn-box {
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    /*background-image: linear-gradient(red 50%, blue 50%);*/
+    background-color: #DDDDDD;
+    overflow: hidden;
+}
+
+.btn-box:hover .btn-bg {
+    transform: scale(1, 1);
+    transition: 300ms;
+}
+
+.btn-bg {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: mediumpurple;
+    border-width: 0;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+    margin-top: -30px;
+    margin-left: -15px;
+    /*margin-left: 50%;
+    position: relative;
+    left: -50px;*/
 }
