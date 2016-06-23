@@ -3,10 +3,6 @@
     text-decoration: none;
 }
 
-#anchor:hover {
-    ;
-}
-
 #btn {
     background-color: #FFFFFF;
     border: none;
@@ -97,7 +93,33 @@
     transform: scale(0, 0);
     margin-top: -30px;
     margin-left: -15px;
-    /*margin-left: 50%;
+}
+
+.btn-desk {
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    background-color: #DDDDDD;
+    overflow: hidden;
+}
+
+.btn-desk:hover .desk-cover {
+    background-color: rgba(225, 0, 255, 0.3);
+    transform: scale(1, 1) translateY(-50%);
+    transition: 400ms;
+}
+
+.desk-cover {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(225, 0, 255, 0);
+    border-width: 0;
+    border-radius: 50%;
+    transform-origin: 50% 0%;
+    margin-left: 50%;
     position: relative;
-    left: -50px;*/
+    left: -50px;
+    top: 50%;
+    transform: scale(0, 0) translateY(-50%);
 }
