@@ -123,3 +123,66 @@
     top: 50%;
     transform: scale(0, 0) translateY(-50%);
 }
+
+#menu_btn {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    transform-origin: 50% 50%;
+}
+
+#menu_btn:hover {
+    transform: scale(0.5, 0.5);
+    transition: 1s;
+}
+
+#menu_ani {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(225, 0, 225, 0);
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+}
+
+#menu_btn:hover #menu_ani {
+    background-color: rgba(225, 0, 225, 0.5);
+    transform: scale(1.5, 1.5);
+    transition: 1s;
+}
+
+#menu_box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #DDDDDD;
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+}
+
+#menu_box:hover {
+    border-radius: 10px;
+    transform: scale(0.7, 0.7);
+    transition: 400ms;
+    /*transition-delay: 1s;*/
+}
+
+#menu {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(225, 0, 225, 0);
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+}
+
+#menu_box:hover #menu {
+    background-color: rgba(225, 0, 225, 0.5);
+    transform: scale(1.5, 1.5);
+    transition: 400ms;
+}
