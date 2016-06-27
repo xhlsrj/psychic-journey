@@ -4,52 +4,60 @@ body, button {
 
 #anchor {
     color: deepskyblue;
+
     text-decoration: none;
 }
 
 #btn {
-    background-color: transparent;
+    cursor: pointer;
+
     border: none;
     outline: none;
-    cursor: pointer;
+    background-color: transparent;
 }
 
 #span_btn {
     cursor: pointer;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 #circle_wrap {
     position: relative;
+
     display: inline-block;
+
     width: 50px;
     height: 50px;
     background-color: lightpink;
 }
 
 #circle_wrap:hover #circle {
-    left: 0;
     top: 0;
+    left: 0;
+
     width: 50px;
     height: 50px;
+
     transition: 200ms;
 }
 
 #circle {
     position: relative;
-    left: 50%;
     top: 50%;
-    width: 0px;
-    height: 0px;
-    background-color: lightgreen;
+    left: 50%;
+
+    width: 0;
+    height: 0;
     border-width: 0;
     border-radius: 50%;
+    background-color: lightgreen;
 }
 
 #point_box {
     display: inline-block;
+
     width: 50px;
     height: 50px;
     background-color: lightgray;
@@ -57,217 +65,261 @@ body, button {
 
 #point_box:hover #point {
     transform: scale(1, 1);
+
     transition: 200ms;
 }
 
 #point {
     display: inline-block;
+
     width: 50px;
     height: 50px;
-    background-color: lightpink;
     border-width: 0;
     border-radius: 50%;
-    transform-origin: 50% 50%;
+    background-color: lightpink;
+
     transform: scale(0, 0);
+    transform-origin: 50% 50%;
 }
 
 .btn-box {
     display: inline-block;
+    overflow: hidden;
+
     width: 70px;
     height: 40px;
-    /*background-image: linear-gradient(red 50%, blue 50%);*/
     background-color: #DDDDDD;
-    overflow: hidden;
+    /*background-image: linear-gradient(red 50%, blue 50%);*/
 }
 
 .btn-box:hover .btn-bg {
     transform: scale(1, 1);
+
     transition: 300ms;
 }
 
 .btn-bg {
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: mediumpurple;
-    border-width: 0;
-    border-radius: 50%;
-    transform-origin: 50% 50%;
-    transform: scale(0, 0);
     margin-top: -30px;
     margin-left: -15px;
+    border-width: 0;
+    border-radius: 50%;
+    background-color: mediumpurple;
+
+    transform: scale(0, 0);
+    transform-origin: 50% 50%;
 }
 
 .btn-desk {
     display: inline-block;
+    overflow: hidden;
+
     width: 70px;
     height: 40px;
     background-color: #DDDDDD;
-    overflow: hidden;
 }
 
 .btn-desk:hover .desk-cover {
-    background-color: rgba(225, 0, 255, 0.3);
+    background-color: rgba(225, 0, 255, .3);
+
     transform: scale(1, 1) translateY(-50%);
+
     transition: 400ms;
 }
 
 .desk-cover {
+    position: relative;
+    top: 50%;
+    left: -50px;
+
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: rgba(225, 0, 255, 0);
+    margin-left: 50%;
     border-width: 0;
     border-radius: 50%;
-    transform-origin: 50% 0%;
-    margin-left: 50%;
-    position: relative;
-    left: -50px;
-    top: 50%;
+    background-color: rgba(225, 0, 255, 0);
+
     transform: scale(0, 0) translateY(-50%);
+    transform-origin: 50% 0;
 }
 
 #menu_btn {
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: #DDDDDD;
     border-radius: 10px;
+    background-color: #DDDDDD;
+
     transform-origin: 50% 50%;
 }
 
 #menu_btn:hover {
-    transform: scale(0.5, 0.5);
+    transform: scale(.5, .5);
+
     transition: 1s;
 }
 
 #menu_ani {
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: rgba(225, 0, 225, 0);
     border-radius: 100%;
-    transform-origin: 50% 50%;
+    background-color: rgba(225, 0, 225, 0);
+
     transform: scale(0, 0);
+    transform-origin: 50% 50%;
 }
 
 #menu_btn:hover #menu_ani {
-    background-color: rgba(225, 0, 225, 0.5);
+    background-color: rgba(225, 0, 225, .5);
+
     transform: scale(1.5, 1.5);
+
     transition: 1s;
 }
 
 #menu_box {
     display: inline-block;
+    overflow: hidden;
+
     width: 100px;
     height: 100px;
     border: 1px solid #DDDDDD;
     border-radius: 100%;
+
     transform-origin: 50% 50%;
-    overflow: hidden;
 }
 
 #menu_box:hover {
     border-radius: 10px;
-    transform: scale(0.7, 0.7);
+
+    transform: scale(.7, .7);
+
     transition: 400ms;
     /*transition-delay: 1s;*/
 }
 
 #menu {
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: rgba(225, 0, 225, 0);
     border-radius: 100%;
-    transform-origin: 50% 50%;
+    background-color: rgba(225, 0, 225, 0);
+
     transform: scale(0, 0);
+    transform-origin: 50% 50%;
 }
 
 #menu_box:hover #menu {
-    background-color: rgba(225, 0, 225, 0.5);
+    background-color: rgba(225, 0, 225, .5);
+
     transform: scale(1.5, 1.5);
+
     transition: 400ms;
 }
-#container{
+#container {
     width: 100px;
     height: 100px;
     border: 1px solid #DDDDDD;
 }
-#plat{
+#plat {
+    overflow: hidden;
+
     width: 100px;
     height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
     border: 1px solid #DDDDDD;
     border-radius: 100%;
-    margin-left: 50px;
-    margin-top: 50px;
+
     transform: translate(-50%,-50%);
-    overflow: hidden;
 }
-#container:hover #plat{
+#container:hover #plat {
     width: 60px;
     height: 60px;
     border-radius: 10px;
+
     transition: 600ms;
 }
-#part{
+#part {
     width: 100px;
     height: 100px;
-    background-color: rgba(255,0,255,0);
-    border-radius: 100%;
-    margin-left: 50%;
     margin-top: 50%;
-    transform-origin: 0% 0%;
+    margin-left: 50%;
+    border-radius: 100%;
+    background-color: rgba(255,0,255,0);
+
     transform: scale(0,0) translate(-50%,-50%);
+    transform-origin: 0 0;
 }
-#container:hover #part{
+#container:hover #part {
+    background-color: rgba(255,0,255,.3);
+
     transform: scale(1,1) translate(-50%,-50%);
-    background-color: rgba(255,0,255,0.3);
+
     transition: 400ms;
 }
-#box{
+#box {
     width: 100px;
     height: 100px;
     border: 1px solid #DDDDDD;
 }
-#desk{
-    width: 100px;
-    height: 100px;
-    border: 1px solid #DDDDDD;
+#desk {
     position: relative;
-    top: 0px;
-    left: 0px;
-    border-radius: 100%;
+    top: 0;
+    left: 0;
+
     overflow: hidden;
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid #DDDDDD;
+    border-radius: 100%;
 }
-#box:hover #desk{
-    width: 60px;
-    height: 60px;
+#box:hover #desk {
     top: 20px;
     left: 20px;
+
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
+
     transition: 1s;
 }
-#bread{
+#bread {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+
     width: 100px;
     height: 100px;
-    background-color: rgba(255,0,255,0);
     border-radius: 100%;
-    transform-origin: 50% 50%;
+    background-color: rgba(255,0,255,0);
+
     transform: scale(0,0);
+    transform-origin: 50% 50%;
 }
-#box:hover #bread{
+#box:hover #bread {
     top: -20px;
     left: -20px;
+
+    background-color: rgba(255,0,255,.3);
+
     transform: scale(1,1);
-    background-color: rgba(255,0,255,0.3);
+
     transition: 1s;
 }
 #basket {
     display: inline-block;
+
     width: 100px;
     height: 100px;
     border: 1px solid #EEEEEE;
@@ -276,24 +328,29 @@ body, button {
 
 #ball {
     display: inline-block;
+
     width: 100px;
     height: 100px;
-    background-color: rgba(225, 0, 225, 0);
     border-radius: 100%;
-    transform-origin: 50% 50%;
+    background-color: rgba(225, 0, 225, 0);
+
     transform: scale(0, 0);
+    transform-origin: 50% 50%;
 }
 
 #basket:hover #ball {
-    background-color: rgba(225, 0, 225, 0.5);
-    transform: scale(1, 1);
     border-radius: 10px;
+    background-color: rgba(225, 0, 225, .5);
+
+    transform: scale(1, 1);
+
     transition: 400ms;
 }
 
 .btn {
-    background-color: transparent;
+    cursor: pointer;
+
     border: none;
     outline: none;
-    cursor: pointer;
+    background-color: transparent;
 }
