@@ -1,72 +1,49 @@
 {
     "config": {
-
         // Whether to add a semicolon after the last value/mixin.
         "always-semicolon": true,
-
         // Set indent for code inside blocks, including media queries and nested rules.
         "block-indent": "    ",
-
         // Unify case of hexadecimal colors.
         "color-case": "upper",
-
         // Whether to expand hexadecimal colors or use shorthands.
         "color-shorthand": false,
-
         // Unify case of element selectors.
         "element-case": "lower",
-
         // Add/remove line break at EOF.
         "eof-newline": false,
-
         // Add/remove leading zero in dimensions.
         "leading-zero": false,
-
         // Unify quotes style.
         "quotes": "single",
-
         // Remove all rulesets that contain nothing but spaces.
         "remove-empty-rulesets": true,
-
         // Set space after `:` in declarations.
         "space-after-colon": " ",
-
         // Set space after combinator (for example, in selectors like `p > a`).
         "space-after-combinator": " ",
-
         // Set space after `{`.
         "space-after-opening-brace": "\n",
-
         // Set space after selector delimiter.
         "space-after-selector-delimiter": " ",
-
         // Set space before `}`.
         "space-before-closing-brace": "\n",
-
         // Set space before `:` in declarations.
         "space-before-colon": "",
-
         // Set space before combinator (for example, in selectors like `p > a`).
         "space-before-combinator": " ",
-
         // Set space before `{`.
         "space-before-opening-brace": " ",
-
         // Set space before selector delimiter.
         "space-before-selector-delimiter": "",
-
         // Set space between declarations (i.e. `color: tomato`).
         "space-between-declarations": "\n",
-
         // Whether to trim trailing spaces.
         "strip-spaces": true,
-
         // Whether to remove units in zero-valued dimensions.
         "unitless-zero": false,
-
         // Whether to align prefixes in properties and values.
         "vendor-prefix-align": true,
-
         // Sort properties in particular order.
         "sort-order": [
             // font & text
@@ -112,8 +89,7 @@
                 "unicode-bidi",
                 "writing-mode",
                 "pointer-events"
-            ],
-            [
+            ],[
                 "opacity",
                 "background",
                 "background-image",
@@ -124,8 +100,7 @@
                 "background-clip",
                 "background-attachment",
                 "background-color"
-            ],
-            [
+            ],[
                 "float",
                 "clear",
                 "position",
@@ -135,8 +110,7 @@
                 "left",
                 "vertical-align",
                 "z-index"
-            ],
-            [
+            ],[
                 "display",
                 "visibility",
                 "overflow",
@@ -148,36 +122,7 @@
                 "flex-order",
                 "flex-pack",
                 "flex-align"
-            ],
-            [
-                "table-layout",
-                "empty-cells",
-                "caption-side",
-                "border-spacing",
-                "border-collapse",
-                "list-style",
-                "list-style-position",
-                "list-style-type",
-                "list-style-image"
-            ],
-            [
-                "content",
-                "quotes",
-                "counter-reset",
-                "counter-increment",
-                "resize",
-                "cursor",
-                "-webkit-user-select",
-                "-moz-user-select",
-                "-ms-user-select",
-                "user-select",
-                "nav-index",
-                "nav-up",
-                "nav-right",
-                "nav-down",
-                "nav-left"
-            ],
-            [
+            ],[
                 "box-sizing",
                 "width",
                 "min-width",
@@ -233,23 +178,20 @@
                 "outline-offset",
                 "box-decoration-break",
                 "box-shadow"
-            ],
-            [
+            ],[
                 "transform",
                 "transform-origin",
                 "transform-style",
                 "perspective",
                 "perspective-origin",
                 "backface-visibility"
-            ],
-            [
+            ],[
                 "transition",
                 "transition-property",
                 "transition-duration",
                 "transition-timing-function",
                 "transition-delay"
-            ],
-            [
+            ],[
                 "animation",
                 "animation-name",
                 "animation-duration",
@@ -259,6 +201,27 @@
                 "animation-direction",
                 "animation-fill-mode",
                 "animation-play-state"
+            ],[
+                "table-layout",
+                "empty-cells",
+                "caption-side",
+                "border-spacing",
+                "border-collapse",
+                "list-style",
+                "list-style-position",
+                "list-style-type",
+                "list-style-image"
+            ],[
+                "content",
+                "quotes",
+                "counter-reset",
+                "counter-increment",
+                "resize",
+                "cursor",
+                "-webkit-user-select",
+                "-moz-user-select",
+                "-ms-user-select",
+                "user-select"
             ]
         ]
     }
