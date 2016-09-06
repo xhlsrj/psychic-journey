@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>some about js</title>
+</head>
+<body>
+	<h3>some about Date</h3>
+	<pre>
+var d = new Date('2016-04-30');
+
+d.setMonth(1);//minus days of Feb and Mar
+d:<span id="d1"></span>
+
+d.setDate(0);//go back to the last day of last month
+d:<span id="d2"></span>
+
+d.setDate(-1);//go back to the day before last day of last month
+d:<span id="d3"></span>
+
+d.setMonth(2);//add days of Jan
+d:<span id="d4"></span>
+
+d.setMonth(-1);//go back to the first day of last month of last year
+d:<span id="d5"></span>
+	</pre>
+	<script>
+		function $id(id) {
+			return document.getElementById(id);
+		}
+		var d = new Date('2016-04-30');
+		d.setMonth(1);
+		$id('d1').innerHTML=d.toString();
+		d.setDate(0);
+		$id('d2').innerHTML=d.toString();
+		d.setDate(-1);
+		$id('d3').innerHTML=d.toString();
+		d.setMonth(1);
+		$id('d4').innerHTML=d.toString();
+		d.setMonth(-1);
+		$id('d5').innerHTML=d.toString();
+	</script>
+</body>
+</html>
