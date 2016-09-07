@@ -3,26 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>some about js</title>
+	<style>
+		pre{
+			font-family: 'Consolas';
+		}
+	</style>
 </head>
 <body>
-	<h3>some about Date</h3>
+	<h2>some about Date</h2>
 	<pre>
 var d = new Date('2016-04-30');
 
-d.setMonth(1);//minus days of Feb and Mar
+d.setMonth(1);// minus days of Feb and Mar
 d:<span id="d1"></span>
 
-d.setDate(0);//go back to the last day of last month
+d.setDate(0);// go back to the last day of last month
 d:<span id="d2"></span>
 
-d.setDate(-1);//go back to the day before last day of last month
+d.setDate(-1);// go back to the day before last day of last month
 d:<span id="d3"></span>
 
-d.setMonth(2);//add days of Jan
+d.setMonth(2);// add days of Jan
 d:<span id="d4"></span>
 
-d.setMonth(-1);//go back to the first day of last month of last year
+d.setMonth(-1);// go back to the first day of last month of last year
 d:<span id="d5"></span>
+
+d.getYear();// the Year minus 1900
+return:<span id="d6"></span>
+
+d.setYear(2016);// the same as d.setFullYear(2016)
+d.getFullYear();
+return:<span id="d7"></span>
 	</pre>
 	<script>
 		function $id(id) {
@@ -39,6 +51,9 @@ d:<span id="d5"></span>
 		$id('d4').innerHTML=d.toString();
 		d.setMonth(-1);
 		$id('d5').innerHTML=d.toString();
+		$id('d6').innerHTML=d.getYear();
+		d.setYear(2016);
+		$id('d7').innerHTML=d.getFullYear();
 	</script>
 </body>
 </html>
