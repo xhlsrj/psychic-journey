@@ -88,7 +88,8 @@
                 "direction",
                 "unicode-bidi",
                 "writing-mode",
-                "pointer-events"
+                "vertical-align"
+                // "pointer-events"
             ],[
                 "opacity",
                 "background",
@@ -108,28 +109,25 @@
                 "right",
                 "bottom",
                 "left",
-                "vertical-align",
                 "z-index"
-            ],[
                 "display",
                 "visibility",
                 "overflow",
                 "overflow-x",
-                "overflow-y",
-                "clip",
-                "zoom",
-                "flex-direction",
-                "flex-order",
-                "flex-pack",
-                "flex-align"
+                "overflow-y"
+                // "zoom",
+                // "flex-direction",
+                // "flex-order",
+                // "flex-pack",
+                // "flex-align"
             ],[
                 "box-sizing",
+                "max-width",
                 "width",
                 "min-width",
-                "max-width",
+                "max-height",
                 "height",
                 "min-height",
-                "max-height",
                 "margin",
                 "margin-top",
                 "margin-right",
@@ -213,9 +211,6 @@
                 "list-style-image"
             ],[
                 "content",
-                "quotes",
-                "counter-reset",
-                "counter-increment",
                 "resize",
                 "cursor",
                 "-webkit-user-select",
