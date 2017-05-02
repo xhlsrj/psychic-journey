@@ -1,0 +1,28 @@
+#five-pointed-star-bg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+    position: relative;
+}
+.five-pointed-star-minus-triangle{
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    border: 50px solid transparent;
+    border-top-width: 25px;
+    border-bottom: 26px solid white;
+    ransform-origin: top center;
+}
+.rotate-72deg{
+    transform: rotate(72deg);
+}
+.rotate-144deg{
+    transform: rotate(144deg);
+}
+.rotate-216deg{
+    transform: rotate(216deg);
+}
+.rotate-288deg{
+    transform: rotate(288deg);
+}
