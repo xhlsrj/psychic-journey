@@ -12,7 +12,48 @@
     border: 50px solid transparent;
     border-top-width: 25px;
     border-bottom: 26px solid white;
-    ransform-origin: top center;
+    transform-origin: center top;
+}
+#five-pointed-hollow-star-bg {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+#five-pointed-hollow-star-bg:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 22px solid white;
+    position: absolute;
+    top: -22px;
+    left: -22px;
+}
+.five-pointed-hollow-star-border-triangle {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    border: 50px solid transparent;
+    /*left: 13px;
+    border: 37px solid transparent;*/
+    border-top-width: 25px;
+    border-bottom: 25px solid rebeccapurple;/* something different by changing width */
+    transform-origin: center top;
+}
+.five-pointed-hollow-star-border-triangle:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top:-23px;
+    left: -50px;
+    /*left: -37px;*/
+    border: 50px solid transparent;
+    /*border: 37px solid transparent;*/
+    border-top-width: 25px;
+    border-bottom: 26px solid white;
 }
 .rotate-72deg{
     transform: rotate(72deg);
