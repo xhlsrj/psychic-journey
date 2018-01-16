@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>some about js</title>
-	<style>
-		pre{
-			font-family: 'Consolas';
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>some about js</title>
+    <style>
+        pre {
+            font-family: 'Consolas';
+        }
+    </style>
 </head>
+
 <body>
-	<h2>some about Date</h2>
-	<pre>
+    <h2>some about Date</h2>
+    <pre>
 var d = new Date('2016-04-30');
 
 d.setMonth(1);// minus days of Feb and Mar
@@ -36,24 +38,62 @@ d.setYear(2016);// the same as d.setFullYear(2016)
 d.getFullYear();
 return:<span id="d7"></span>
 	</pre>
-	<script>
-		function $id(id) {
-			return document.getElementById(id);
-		}
-		var d = new Date('2016-04-30');
-		d.setMonth(1);
-		$id('d1').innerHTML=d.toString();
-		d.setDate(0);
-		$id('d2').innerHTML=d.toString();
-		d.setDate(-1);
-		$id('d3').innerHTML=d.toString();
-		d.setMonth(1);
-		$id('d4').innerHTML=d.toString();
-		d.setMonth(-1);
-		$id('d5').innerHTML=d.toString();
-		$id('d6').innerHTML=d.getYear();
-		d.setYear(2016);
-		$id('d7').innerHTML=d.getFullYear();
-	</script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+        var d = new Date(`2016-04-30`);
+        d.setMonth(1);
+        $id(`d1`).innerHTML = d.toString();
+        d.setDate(0);
+        $id(`d2`).innerHTML = d.toString();
+        d.setDate(-1);
+        $id(`d3`).innerHTML = d.toString();
+        d.setMonth(1);
+        $id(`d4`).innerHTML = d.toString();
+        d.setMonth(-1);
+        $id(`d5`).innerHTML = d.toString();
+        $id(`d6`).innerHTML = d.getYear();
+        d.setYear(2016);
+        $id(`d7`).innerHTML = d.getFullYear();
+    </script>
+    <h3>get time string</h3>
+    <pre>
+const timeStr = () => {
+	const now = new Date();
+	const timeArr = [
+		now.getFullYear(),
+		now.getMonth() + 1,
+		now.getDate(),
+		now.getHours(),
+		now.getMinutes(),
+		now.getSeconds()
+		// now.getMilliseconds()
+	];
+	// yyyyMMddHHmmss
+	const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
+	return timeString * 1000 + now.getMilliseconds();
+};		
+	</pre> return:
+    <span id="timeStr"></span>
+    <script>
+        const timeStr = () => {
+            const now = new Date();
+            const timeArr = [
+                now.getFullYear(),
+                now.getMonth() + 1,
+                now.getDate(),
+                now.getHours(),
+                now.getMinutes(),
+                now.getSeconds()
+                // now.getMilliseconds()
+            ];
+            // yyyyMMddHHmmss
+            const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
+            return timeString * 1000 + now.getMilliseconds();
+        };
+        $id(`timeStr`).innerHTML = timeStr();
+    </script>
 </body>
+
 </html>
