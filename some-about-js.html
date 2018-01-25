@@ -72,7 +72,7 @@ const timeStr = () => {
 	];
 	// yyyyMMddHHmmssfff
 	const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
-	return timeString * 1000 + now.getMilliseconds();
+	return `${timeString * 1000 + now.getMilliseconds()}`;
 };		
 	</pre> return:
     <span id="timeStr"></span>
@@ -90,7 +90,7 @@ const timeStr = () => {
             ];
             // yyyyMMddHHmmss
             const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
-            return timeString * 1000 + now.getMilliseconds();
+            return `${timeString * 1000 + now.getMilliseconds()}`;
         };
         $id(`timeStr`).innerHTML = timeStr();
     </script>
