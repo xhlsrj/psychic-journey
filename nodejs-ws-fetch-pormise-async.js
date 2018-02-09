@@ -172,7 +172,7 @@ async function execute(msg) {
 }
 function interval() {
     const mm = new Date().getMinutes();
-    if (data.ws.readyState !== 1) {
+    if (data.ws.readyState === 1) {
         data.taskTimeoutID = setTimeout(start, (61 - mm) * 60000);
     }
 }
