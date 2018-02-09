@@ -70,6 +70,11 @@ const timeStr = () => {
 		now.getSeconds()
 		// now.getMilliseconds()
 	];
+	// yyyy-MM-dd HH:mm:ss
+        const timeStrArr = timeArr.map((value) => {
+	    return value.toString().padStart(2, `0`);
+        });
+	`${timeStrArr[0]}-${timeStrArr[1]}-${timeStrArr[2]} ${timeStrArr[3]}:${timeStrArr[4]}:${timeStrArr[5]}`;
 	// yyyyMMddHHmmssfff
 	const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
 	return `${timeString * 1000 + now.getMilliseconds()}`;
@@ -88,6 +93,11 @@ const timeStr = () => {
                 now.getSeconds()
                 // now.getMilliseconds()
             ];
+	    // yyyy-MM-dd HH:mm:ss
+	    const timeStrArr = timeArr.map((value) => {
+	        return value.toString().padStart(2, `0`);
+	    });
+	    `${timeStrArr[0]}-${timeStrArr[1]}-${timeStrArr[2]} ${timeStrArr[3]}:${timeStrArr[4]}:${timeStrArr[5]}`;
             // yyyyMMddHHmmss
             const timeString = timeArr.reduce((accumulator, currentValue) => accumulator * 100 + currentValue);
             return `${timeString * 1000 + now.getMilliseconds()}`;
