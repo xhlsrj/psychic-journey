@@ -88,7 +88,7 @@ async function getData() {
         const pool = await sql.connect(config);
         // let result = await pool.request().query(`query`);
         const q = `query`;
-        const result = await sql.query(q);
+        const result = await pool.request().query(q);
         console.log(result);
     } catch (err) {
         console.error(err);
@@ -114,7 +114,7 @@ async function signIn() {
         getReady();
     } catch (e) {
         console.warn(e);
-        if (data.ws.readyState !== 1) {
+        if (data.ws.readyState === 1) {
             data.signInTimeoutID = setTimeout(signIn, data.retryDelay);
         }
     }
@@ -122,7 +122,7 @@ async function signIn() {
 function getReady() {
     const mm = new Date().getMinutes();
     if (mm !== 0) {
-        if (data.ws.readyState !== 1) {
+        if (data.ws.readyState === 1) {
             data.taskTimeoutID = setTimeout(start, (61 - mm) * 60000);
         }
     } else {
@@ -138,7 +138,7 @@ async function start() {
     } catch (e) {
         data.SQLcounter++;
         if (data.SQLcounter < 5) {
-            if (data.ws.readyState !== 1) {
+            if (data.ws.readyState === 1) {
                 data.taskTimeoutID = setTimeout(start, data.retryDelay);
             } else {
                 data.SQLcounter = 0;
@@ -160,7 +160,7 @@ async function execute(msg) {
         console.error(e);
         data.sendMsgCounter++;
         if (data.sendMsgCounter < 5) {
-            if (data.ws.readyState !== 1) {
+            if (data.ws.readyState === 1) {
                 return execute(cmd);
             } else {
                 data.sendMsgCounter = 0;
