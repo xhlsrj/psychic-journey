@@ -6,3 +6,10 @@ arr.forEach(async (e) => {
     console.log(`as you see`);
     await p.then(console.log);
 });
+
+// as you see
+// as you see
+// 1000
+// 3000
+
+// use for
