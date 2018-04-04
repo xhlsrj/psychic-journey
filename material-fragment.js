@@ -1,5 +1,9 @@
+const $id = (id) => {
+    return document.getElementById(id);
+};
+
 function AnchorClick() {
-    $('#anchor').click(function() {
+    $id('anchor').addEventListener(`click`, () => {
         console.log(1);
     });
 }
