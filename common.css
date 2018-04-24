@@ -1,0 +1,27 @@
+.bold {
+    font-weight: 700;
+}
+.tac {
+    text-align: center;
+}
+.vam {
+    vertical-align: middle;
+}
+.ib {
+    display: inline-block;
+}
+.df {
+    display: flex;
+}
+.dg {
+    display: grid;
+}
+.dn {
+    display: none;
+}
+.vh {
+    visibility: hidden;
+}
+.usn {
+    user-select: none;
+}
