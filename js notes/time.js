@@ -1,4 +1,4 @@
-// some note about Date methods
+// some notes about Date methods
 const date = new Date(`2016.04.30`);
 
 date.setMonth(1);
