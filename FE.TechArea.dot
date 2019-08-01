@@ -1,0 +1,68 @@
+digraph FE{
+  rankdir=LR
+  node [shape="box",style="rounded"]
+  {
+    "Data.Data"[label="Data"]
+    "UI.UI"[label="UI"]
+    "Dev.Dev"[label="Dev"]
+  }
+
+  FE->{"Data.Data","UI.UI","Dev.Dev"}
+
+  // Data
+  {
+    "Data.Storage"[label="Storage"]
+      "Data.Location"[label="Location"]
+        "Data.Persistence"[label="Persistence"]
+        "Data.Accessibility"[label="Accessibility"]
+      "Data.Structure"[label="Structure"]
+    "Data.Operation"[label="Operation"]
+      "Data.CRUD"[label="CRUD"]
+      "Data.Transaction"[label="Transaction"]
+      "Data.Derivation"[label="Derivation"]
+        "Data.UI"[label="UI"]
+        "Data.Route"[label="Route"]
+        "Data.Action"[label="Action"]
+    "Data.Management"[label="Management"]
+      "Data.SingleSourceOfTruth"[label="SingleSourceOfTruth"]
+      "Data.OneWayDataFlow"[label="OneWayDataFlow"]
+  }
+
+  {"Data.Data"}->{"Data.Storage","Data.Operation","Data.Management"}
+    {"Data.Storage"}->{"Data.Location","Data.Structure"}
+      {"Data.Location"}->{"Data.Persistence","Data.Accessibility"}
+    {"Data.Operation"}->{"Data.CRUD","Data.Transaction","Data.Derivation"}
+      {"Data.Derivation"}->{"Data.UI","Data.Route","Data.Action"}
+    {"Data.Management"}->{"Data.SingleSourceOfTruth","Data.OneWayDataFlow"}
+
+
+  // UI
+  {
+    "UI.View"[label="View"]
+      "UI.Element"[label="Element"]
+        "UI.VDOM"[label="VDOM"]
+          "UI.Component"[label="Component"]
+      "UI.Style"[label="Style"]
+        "UI.Layout"[label="Layout"]
+        "UI.Decoration"[label="Decoration"]
+        "UI.Form"[label="Form"]
+        "UI.Animation"[label="Animation"]
+      "UI.WebGL"[label="WebGL"]
+    "UI.Interaction"[label="Interaction"]
+      "UI.Behaviour"[label="Behaviour"]
+      "UI.Response"[label="Response"]
+  }
+
+  {"UI.UI"}->{"UI.View","UI.Interaction"}
+    {"UI.View"}->{"UI.Element","UI.Style","UI.WebGL"}
+      {"UI.Element"}->{"UI.VDOM"}->{"UI.Component"}
+      {"UI.Style"}->{"UI.Layout","UI.Decoration","UI.Form","UI.Animation"}
+    {"UI.Interaction"}->{"UI.Behaviour","UI.Response"}
+
+  // Dev
+  {
+    "Dev."[label=""]
+  }
+
+  {"Dev.Dev"}
+}
