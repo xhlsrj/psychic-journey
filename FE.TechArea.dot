@@ -31,7 +31,8 @@ digraph FE{
   {"Data.Data"}->{"Data.Storage","Data.Operation","Data.Management"}
     {"Data.Storage"}->{"Data.Location","Data.Structure"}
       {"Data.Location"}->{"Data.Persistence","Data.Accessibility"}
-    {"Data.Operation"}->{"Data.CRUD","Data.Transaction","Data.Derivation"}
+    {"Data.Operation"}->{"Data.CRUD","Data.Derivation"}
+      {"Data.CRUD"}->{"Data.Transaction"}
       {"Data.Derivation"}->{"Data.UI","Data.Route","Data.Action"}
     {"Data.Management"}->{"Data.SingleSourceOfTruth","Data.OneWayDataFlow"}
 
@@ -39,30 +40,67 @@ digraph FE{
   // UI
   {
     "UI.View"[label="View"]
-      "UI.Element"[label="Element"]
-        "UI.VDOM"[label="VDOM"]
-          "UI.Component"[label="Component"]
+      "UI.Content"[label="Content"]
+        "UI.Text"[label="Text"]
+        "UI.Media"[label="Media"]
+        "UI.Canvas"[label="Canvas"]
       "UI.Style"[label="Style"]
         "UI.Layout"[label="Layout"]
         "UI.Decoration"[label="Decoration"]
-        "UI.Form"[label="Form"]
+        "UI.Shape"[label="Shape"]
         "UI.Animation"[label="Animation"]
-      "UI.WebGL"[label="WebGL"]
     "UI.Interaction"[label="Interaction"]
       "UI.Behaviour"[label="Behaviour"]
+        "UI.UIEvent"[label="UIEvent"]
       "UI.Response"[label="Response"]
+        "UI.Direct"[label="Direct"]
+        "UI.Delegation"[label="Delegation"]
   }
 
   {"UI.UI"}->{"UI.View","UI.Interaction"}
-    {"UI.View"}->{"UI.Element","UI.Style","UI.WebGL"}
-      {"UI.Element"}->{"UI.VDOM"}->{"UI.Component"}
-      {"UI.Style"}->{"UI.Layout","UI.Decoration","UI.Form","UI.Animation"}
+    {"UI.View"}->{"UI.Content","UI.Style"}
+      {"UI.Content"}->{"UI.Text","UI.Media","UI.Canvas"}
+      {"UI.Style"}->{"UI.Layout","UI.Decoration","UI.Shape","UI.Animation"}
     {"UI.Interaction"}->{"UI.Behaviour","UI.Response"}
+      {"UI.Behaviour"}->{"UI.UIEvent"}
+      {"UI.Response"}->{"UI.Direct","UI.Delegation"}
 
   // Dev
   {
-    "Dev."[label=""]
+    "Dev.Paradigm"[label="Paradigm"]
+      "Dev.Imperative"[label="Imperative"]
+        "Dev.Procedural"[label="Procedural"]
+        "Dev.Object-oriented"[label="Object-oriented"]
+      "Dev.Declarative"[label="Declarative"]
+        "Dev.Functional"[label="Functional"]
+        "Dev.Reactive"[label="Reactive"]
+      "Dev.Metaprogramming"[label="Metaprogramming"]
+        "Dev.Proxy"[label="Proxy"]
+        "Dev.Reflect"[label="Reflect"]
+    "Dev.Modularization"[label="Modularization"]
+      "Dev.Componentization"[label="Componentization"]
+        "Dev.View"[label="View"]
+        "Dev.Container"[label="Container"]
+      "Dev.Tier"[label="Tier"]
+        "Dev.Middleground"[label="Middleground"]
+        "Dev.Serverless"[label="Serverless"]
+    "Dev.Engineering"[label="Engineering"]
+      "Dev.Build"[label="Build"]
+        "Dev.Converting"[label="Converting"]
+        "Dev.Compression"[label="Compression"]
+      "Dev.Server"[label="Server"]
+      "Dev.Debug"[label="Debug"]
+      "Dev.Test"[label="Test"]
   }
 
-  {"Dev.Dev"}
+  {"Dev.Dev"}->{"Dev.Paradigm","Dev.Modularization","Dev.Engineering"}
+    {"Dev.Paradigm"}->{"Dev.Imperative","Dev.Declarative","Dev.Metaprogramming"}
+      {"Dev.Imperative"}->{"Dev.Procedural","Dev.Object-oriented"}
+      {"Dev.Declarative"}->{"Dev.Functional","Dev.Reactive"}
+      {"Dev.Metaprogramming"}->{"Dev.Proxy","Dev.Reflect"}
+    {"Dev.Modularization"}->{"Dev.Componentization","Dev.Tier"}
+      {"Dev.Componentization"}->{"Dev.View","Dev.Container"}
+      {"Dev.Tier"}->{"Dev.Middleground","Dev.Serverless"}
+    {"Dev.Engineering"}->{"Dev.Build","Dev.Server","Dev.Debug","Dev.Test"}
+      {"Dev.Build"}->{"Dev.Converting","Dev.Compression"}
 }
