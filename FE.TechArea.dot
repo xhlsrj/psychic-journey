@@ -22,7 +22,7 @@ digraph FE{
       "Data.Derivation"[label="Derivation"]
         "Data.UI"[label="UI"]
         "Data.Route"[label="Route"]
-        "Data.Action"[label="Action"]
+        "Data.Reaction"[label="Reaction"]
     "Data.Management"[label="Management"]
       "Data.SingleSourceOfTruth"[label="SingleSourceOfTruth"]
       "Data.OneWayDataFlow"[label="OneWayDataFlow"]
@@ -33,7 +33,7 @@ digraph FE{
       {"Data.Location"}->{"Data.Persistence","Data.Accessibility"}
     {"Data.Operation"}->{"Data.CRUD","Data.Derivation"}
       {"Data.CRUD"}->{"Data.Transaction"}
-      {"Data.Derivation"}->{"Data.UI","Data.Route","Data.Action"}
+      {"Data.Derivation"}->{"Data.UI","Data.Route","Data.Reaction"}
     {"Data.Management"}->{"Data.SingleSourceOfTruth","Data.OneWayDataFlow"}
 
 
