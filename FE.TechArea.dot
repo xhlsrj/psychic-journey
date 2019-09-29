@@ -40,10 +40,10 @@ digraph FE{
   // UI
   {
     "UI.View"[label="View"]
-      "UI.Content"[label="Content"]
+      "UI.Node"[label="Node"]
+        "UI.Tag"[label="Tag"]
+        "UI.Attribute"[label="Attribute"]
         "UI.Text"[label="Text"]
-        "UI.Media"[label="Media"]
-        "UI.Canvas"[label="Canvas"]
       "UI.Style"[label="Style"]
         "UI.Layout"[label="Layout"]
         "UI.Decoration"[label="Decoration"]
@@ -52,18 +52,18 @@ digraph FE{
     "UI.Interaction"[label="Interaction"]
       "UI.Behaviour"[label="Behaviour"]
         "UI.UIEvent"[label="UIEvent"]
-      "UI.Response"[label="Response"]
+      "UI.Listener"[label="Listener"]
         "UI.Direct"[label="Direct"]
         "UI.Delegation"[label="Delegation"]
   }
 
   {"UI.UI"}->{"UI.View","UI.Interaction"}
-    {"UI.View"}->{"UI.Content","UI.Style"}
-      {"UI.Content"}->{"UI.Text","UI.Media","UI.Canvas"}
+    {"UI.View"}->{"UI.Node","UI.Style"}
+      {"UI.Node"}->{"UI.Tag","UI.Attribute","UI.Text"}
       {"UI.Style"}->{"UI.Layout","UI.Decoration","UI.Shape","UI.Animation"}
-    {"UI.Interaction"}->{"UI.Behaviour","UI.Response"}
+    {"UI.Interaction"}->{"UI.Behaviour","UI.Listener"}
       {"UI.Behaviour"}->{"UI.UIEvent"}
-      {"UI.Response"}->{"UI.Direct","UI.Delegation"}
+      {"UI.Listener"}->{"UI.Direct","UI.Delegation"}
 
   // Dev
   {
