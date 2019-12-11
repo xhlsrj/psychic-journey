@@ -49,6 +49,9 @@ digraph FE{
         "UI.Decoration"[label="Decoration"]
         "UI.Shape"[label="Shape"]
         "UI.Animation"[label="Animation"]
+      "UI.Render"[label="Render"]
+        "UI.FirstRender"[label="FirstRender"]
+        "UI.Rerender"[label="Rerender"]
     "UI.Interaction"[label="Interaction"]
       "UI.Behaviour"[label="Behaviour"]
         "UI.UIEvent"[label="UIEvent"]
@@ -58,9 +61,10 @@ digraph FE{
   }
 
   {"UI.UI"}->{"UI.View","UI.Interaction"}
-    {"UI.View"}->{"UI.Node","UI.Style"}
+    {"UI.View"}->{"UI.Node","UI.Style","UI.Render"}
       {"UI.Node"}->{"UI.Tag","UI.Attribute","UI.Text"}
       {"UI.Style"}->{"UI.Layout","UI.Decoration","UI.Shape","UI.Animation"}
+      {"UI.Render"}->{"UI.FirstRender","UI.Rerender"}
     {"UI.Interaction"}->{"UI.Behaviour","UI.Listener"}
       {"UI.Behaviour"}->{"UI.UIEvent"}
       {"UI.Listener"}->{"UI.Direct","UI.Delegation"}
@@ -73,6 +77,7 @@ digraph FE{
         "Dev.Object-oriented"[label="Object-oriented"]
       "Dev.Declarative"[label="Declarative"]
         "Dev.Functional"[label="Functional"]
+          "Dev.Ramda"[label="Ramda"]
         "Dev.Reactive"[label="Reactive"]
       "Dev.Metaprogramming"[label="Metaprogramming"]
         "Dev.Proxy"[label="Proxy"]
@@ -85,22 +90,40 @@ digraph FE{
         "Dev.Middleground"[label="Middleground"]
         "Dev.Serverless"[label="Serverless"]
     "Dev.Engineering"[label="Engineering"]
-      "Dev.Build"[label="Build"]
-        "Dev.Converting"[label="Converting"]
-        "Dev.Compression"[label="Compression"]
-      "Dev.Server"[label="Server"]
-      "Dev.Debug"[label="Debug"]
-      "Dev.Test"[label="Test"]
+      "Dev.Environment"[label="Environment"]
+        "Dev.Server"[label="Server"]
+        "Dev.Terminal"[label="Terminal"]
+      "Dev.QA"[label="QA"]
+        "Dev.Test"[label="Test"]
+          "Dev.Items"[label="Items"]
+            "Dev.Security"[label="Security"]
+            "Dev.Function"[label="Function"]
+            "Dev.Performance"[label="Performance"]
+          "Dev.Scale"[label="Scale"]
+            "Dev.Unit"[label="Unit"]
+            "Dev.Integration"[label="Integration"]
+        "Dev.CodeReview"[label="CodeReview"]
+      // "Dev.Build"[label="Build"]
+      //   "Dev.Converting"[label="Converting"]
+      //   "Dev.Compression"[label="Compression"]
+      // "Dev.release"[label="release"]
   }
 
   {"Dev.Dev"}->{"Dev.Paradigm","Dev.Modularization","Dev.Engineering"}
     {"Dev.Paradigm"}->{"Dev.Imperative","Dev.Declarative","Dev.Metaprogramming"}
       {"Dev.Imperative"}->{"Dev.Procedural","Dev.Object-oriented"}
       {"Dev.Declarative"}->{"Dev.Functional","Dev.Reactive"}
+        {"Dev.Functional"}->{"Dev.Ramda"}
       {"Dev.Metaprogramming"}->{"Dev.Proxy","Dev.Reflect"}
     {"Dev.Modularization"}->{"Dev.Componentization","Dev.Tier"}
       {"Dev.Componentization"}->{"Dev.View","Dev.Container"}
       {"Dev.Tier"}->{"Dev.Middleground","Dev.Serverless"}
-    {"Dev.Engineering"}->{"Dev.Build","Dev.Server","Dev.Debug","Dev.Test"}
-      {"Dev.Build"}->{"Dev.Converting","Dev.Compression"}
+    // {"Dev.Engineering"}->{"Dev.Environment","Dev.QA","Dev.Build","Dev.release"}
+    {"Dev.Engineering"}->{"Dev.Environment","Dev.QA"}
+      {"Dev.Environment"}->{"Dev.Server","Dev.Terminal"}
+      {"Dev.QA"}->{"Dev.Test","Dev.CodeReview"}
+        {"Dev.Test"}->{"Dev.Items","Dev.Scale"}
+          {"Dev.Items"}->{"Dev.Security","Dev.Function","Dev.Performance"}
+          {"Dev.Scale"}->{"Dev.Unit","Dev.Integration"}
+      // {"Dev.Build"}->{"Dev.Converting","Dev.Compression"}
 }
