@@ -1,0 +1,49 @@
+/* text */
+.bold {
+  /* font-weight: 700; */
+  font-weight: bold;
+}
+.tac {
+  text-align: center;
+}
+.vam {
+  vertical-align: middle;
+}
+/* position */
+.posa {
+  position: absolute;
+}
+.posr {
+  position: relative;
+}
+/* layout */
+.dib {
+  display: inline-block;
+}
+.df {
+  display: flex;
+}
+.dg {
+  display: grid;
+}
+.dn {
+  display: none;
+}
+.vh {
+  visibility: hidden;
+}
+/* dimension */
+.mauto {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* ui */
+.pointer {
+  cursor: pointer;
+}
+.usn {
+  user-select: none;
+}
+.bzb {
+  box-sizing: border-box;
+}
